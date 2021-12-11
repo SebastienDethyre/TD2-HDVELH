@@ -17,9 +17,29 @@ public class Scenario {
 
 	/* TO BE COMPLETED */
 
+	public Scenario(GUIManager gui2, Event startEvent) {
+		gui = gui2;
+		head = startEvent;
+	}
+	private Event getHead() {
+		return head;
+	}
+
+	public void run() {
+		Event nextEvent = getHead();
+		if (nextEvent == null) return ;
+		while(nextEvent.hasDaughters()) {
+			nextEvent = nextEvent.run();
+
+		}
+
+	}
+
+
 	/* MAIN */
 	public static void main(String[] args) {
 		Scenario scenario;
+		Scenario scenario2;
 		GUIManager gui = new GUIManager(System.in, System.out, System.err);
 
 		// S
@@ -57,7 +77,7 @@ public class Scenario {
 		event2.addDaughter(event3);
 		event3.addDaughter(endEvent);
 		event3.addDaughter(event3);
-
+		scenario2 = new Scenario(gui, event3);
 		/* ******* */
 		// **2.3
 		// ***event4
@@ -74,7 +94,7 @@ public class Scenario {
 		event4.addDaughter(endEvent);
 		event4.addDaughter(event3);
 
-		System.out.println(scenario.run());
+		scenario2.run();
 	}
 }
 
