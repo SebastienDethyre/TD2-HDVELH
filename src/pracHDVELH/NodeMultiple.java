@@ -11,6 +11,7 @@ import myUtils.ErrorNaiveHandler;
  * @author prost
  *
  */
+
 public class NodeMultiple {
 	public static final int ERROR_STATUS_INDEX_OUT_OF_RANGE = -1;
 	public static final String ERROR_MSG_INDEX_OUT_OF_RANGE = "Index out of range";
@@ -21,7 +22,7 @@ public class NodeMultiple {
 	/* Overridden methods */
 	@Override
 	public String toString() {
-		/* TO BE COMPLETED */
+		return data.toString();
 	}
 
 	/* Getters/Setters */
@@ -33,8 +34,10 @@ public class NodeMultiple {
 	 * @param i the index of the daughter node.
 	 * @return the {@code i}th daughter node, or {@code null} if it does not exist.
 	 */
-	public NodeMultiple getDaughter(int i) {
-		/* TO BE COMPLETED */
+	
+	public NodeMultiple getDaughter(int i) {		
+		if (i>daughters.length) return null;	
+		return daughters[i];
 	}
 
 	/**
@@ -52,21 +55,21 @@ public class NodeMultiple {
 	 * @param i        the daughter node's index
 	 */
 	public void setDaughter(NodeMultiple daughter, int i) {
-		/* TO BE COMPLETED */
+		daughters[i]= daughter;		
 	}
 
 	/**
 	 * @return all the daughters
 	 */
-	public NodeMultiple[] getDaughters() {
-		/* TO BE COMPLETED */
+	public NodeMultiple[] getDaughters() {		
+			return daughters;		
 	}
 
 	/**
 	 * @param daughters the daughters to set
 	 */
 	public void setDaughters(NodeMultiple[] daughters) {
-		/* TO BE COMPLETED */
+		this.daughters = daughters;
 	}
 
 	/**
@@ -78,21 +81,26 @@ public class NodeMultiple {
 	 * @param daughter
 	 */
 	public void addDaughter(NodeMultiple daughter) {
-		/* TO BE COMPLETED */
+		if (daughter == null) return;
+		int i=0;
+		while(i < NODE_MAX_ARITY && daughters[i] != null)
+		{++i;}
+		if (i>NODE_MAX_ARITY)return;
+		daughters[i]= daughter;
 	}
 
 	/**
 	 * @return the content data
 	 */
 	public Object getData() {
-		/* TO BE COMPLETED */
+		return this.data;
 	}
 
 	/**
 	 * @param data
 	 */
 	public void setData(Object data) {
-		/* TO BE COMPLETED */
+		this.data = data;
 	}
 
 	/**
@@ -100,7 +108,8 @@ public class NodeMultiple {
 	 *         daughter node.
 	 */
 	public boolean hasDaughters() {
-		/* TO BE COMPLETED */
+		if(daughters == null)return false;
+		return true;
 	}
 
 	/* Constructors */
@@ -108,7 +117,9 @@ public class NodeMultiple {
 	 * Default constructor.
 	 */
 	public NodeMultiple() {
-		/* TO BE COMPLETED */
+		super(); /* appel au constructeur parent */
+		data = new Object();
+		daughters = new NodeMultiple [NODE_MAX_ARITY];
 	}
 
 	/**
@@ -118,8 +129,10 @@ public class NodeMultiple {
 	 * @param data
 	 */
 	public NodeMultiple(Object data) {
-		/* TO BE COMPLETED */
+		this.data = data;
+		daughters = new NodeMultiple [NODE_MAX_ARITY];
 	}
+	
 }
 
 // eof
