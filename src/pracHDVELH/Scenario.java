@@ -94,7 +94,7 @@ public class Scenario {
 		event4.addDaughter(endEvent);
 		event4.addDaughter(event3);
 
-		scenario2.run();
+		scenario.run();
 	}
 }
 
