@@ -7,7 +7,7 @@ package pracHDVELH;
 
 /**
  * @author prost
- *
+ * test
  */
 public class Scenario {
 	private static final String MSG_EMPTY_SCENARIO = "Sorry, no scenario was found.";
