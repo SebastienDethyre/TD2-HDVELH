@@ -25,12 +25,20 @@ public class Event extends NodeMultiple {
 	private int id;
 	private static int lastId=0;
 
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 	public Event(GUIManager gui, String data) {
 		super(data);
 		this.gui = gui;
 		//this.data = data;
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 		reader = gui.getInputReader();
 		id = ++ lastId;
 	}
@@ -100,7 +108,11 @@ public class Event extends NodeMultiple {
 	 */
 	@Override
 	public Event getDaughter(int i) {
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 		return (Event) super.getDaughter(i);
 	}
 
@@ -132,22 +144,37 @@ public class Event extends NodeMultiple {
 	 */
 	public int getId() {
 		return id;
+<<<<<<< HEAD
 	}
 
 	public int interpretAnswer(String playerAnswer) {
 		return Integer.parseInt(playerAnswer)-1;
+=======
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 	}
-
+	
+	public int interpretAnswer(String playerAnswer) {
+		return Integer.parseInt(playerAnswer)-1;
+	}
+	
 	/* Methods */
 	/* TO BE COMPLETED */
+<<<<<<< HEAD
 	public Event run() {
+=======
+	public Event run() {		
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 		gui.outputln(this.toString());
 		gui.output(PROMPT_ANSWER);
 		playerAnswer=reader.next();
 		//interpretAnswer(playerAnswer);
 		chosenPath = interpretAnswer(playerAnswer);
 		return getDaughter(chosenPath);
+<<<<<<< HEAD
 		//exposé de la situation
+=======
+		//exposé de la situation		
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 		//réponse du joueur
 		//interpréter réponse
 		//appel de l'événement suivant

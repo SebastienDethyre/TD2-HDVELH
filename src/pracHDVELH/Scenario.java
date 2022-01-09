@@ -21,20 +21,35 @@ public class Scenario {
 		gui = gui2;
 		head = startEvent;
 	}
+<<<<<<< HEAD
 	private Event getHead() {
 		return head;
 	}
 
+=======
+	private Event getHead() {		
+		return head;
+	}
+	
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 	public void run() {
 		Event nextEvent = getHead();
 		if (nextEvent == null) return ;
 		while(nextEvent.hasDaughters()) {
 			nextEvent = nextEvent.run();
+<<<<<<< HEAD
 
 		}
 
 	}
 
+=======
+			
+		}
+		
+	}
+	
+>>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 
 	/* MAIN */
 	public static void main(String[] args) {
