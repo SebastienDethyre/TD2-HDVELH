@@ -9,29 +9,29 @@ public class EventExactSolution extends Event {
     public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
     private Scanner reader;
     private String playerAnswer;
-    private int chosenPath;
+    //private int chosenPath;
     private GUIManager gui;
     private String data;
     private int id;
     private static int lastId=0;
     private Event daughters[];
-    public EventExactSolution() {
-        super(data);
-        this.gui = gui;
+    public EventExactSolution(GUIManager gui, String data, String answer) {
+        super(gui, data);
+       // this.gui = gui;
         //this.data = data;
 
         reader = gui.getInputReader();
         id = ++ lastId;
     }
 
-    public EventExactSolution(GUIManager gui, String data) {
-        super(gui, data);
+   // public EventExactSolution() {
+        //super(gui, data);
         // TODO Auto-generated constructor stub
-    }
+    //}
 
-    public EventExactSolution(GUIManager gui, String string, String string2) {
+    //public EventExactSolution(GUIManager gui, String string, String string2) {
         // TODO Auto-generated constructor stub
-    }
+    //}
 
 }
 
