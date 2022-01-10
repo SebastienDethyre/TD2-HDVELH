@@ -21,13 +21,13 @@ public class Event extends NodeMultiple {
 	private String playerAnswer;
 	private int chosenPath;
 	private GUIManager gui;
-	private String data;
+	//private String data;
 	private int id;
 	private static int lastId=0;
 
 	public Event(GUIManager gui, String data) {
 		super(data);
-		this.data= data;
+	
 		this.gui = gui;
 		//this.data = data;
 
@@ -84,7 +84,7 @@ public class Event extends NodeMultiple {
 	 * @see pracHDVELH.NodeMultiple#getData()
 	 */
 	public String getData() {
-		return data;
+		return data.toString();
 	}
 
 	/**
@@ -138,6 +138,7 @@ public class Event extends NodeMultiple {
 
 	
 	public int interpretAnswer(String playerAnswer) {
+		
 		return Integer.parseInt(playerAnswer)-1;
 	}
 	

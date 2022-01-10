@@ -15,16 +15,30 @@ public class EventExactSolution extends Event {
     private int id;
     private static int lastId=0;
     private Event daughters[];
+    private String pi;
     
     public EventExactSolution(GUIManager gui, String data, String answer) {
         super(gui, data);
        // this.gui = gui;
         //this.data = data;
-
+        this.pi=answer;
         reader = gui.getInputReader();
         id = ++ lastId;
+        
     }
-
+    public int interpretAnswer(String playerAnswer) {
+		if (playerAnswer.toString()==pi){
+			System.out.print("yes");
+			return 1;
+		}
+		else {
+			System.out.print("no");
+	    return 1;
+		}
+		
+		
+	
+	}
    // public EventExactSolution() {
         //super(gui, data);
         // TODO Auto-generated constructor stub

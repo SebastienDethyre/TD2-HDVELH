@@ -78,12 +78,13 @@ public class Scenario {
 		// ***E
 		// ***event3
 
-		Event event3 = new EventExactSolution(gui, "Wizard: how much is worth pi?", "3.14159");
+		Event event3 = new EventExactSolution(gui, "Wizard: how much is worth pi?", "3.1");
 		
 		event2.setData(event2.getData() + " (3)2.3");
 		event2.addDaughter(event3);
-		event3.addDaughter(endEvent);
 		event3.addDaughter(event3);
+		event3.addDaughter(endEvent);
+		
 		scenario2 = new Scenario(gui, event3);
 		/* ******* */
 		// **2.3
