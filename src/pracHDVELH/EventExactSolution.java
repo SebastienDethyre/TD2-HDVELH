@@ -27,13 +27,14 @@ public class EventExactSolution extends Event {
         
     }
     public int interpretAnswer(String playerAnswer) {
-		if (playerAnswer.toString()==pi){
+		if (playerAnswer.equals(pi)){
 			System.out.print("yes");
 			return 1;
 		}
 		else {
-			System.out.print("no");
-	    return 1;
+			//System.out.print(playerAnswer.toString());
+			//System.out.print(pi.toString());
+	    return 0;
 		}
 		
 		

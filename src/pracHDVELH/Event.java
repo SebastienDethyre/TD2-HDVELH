@@ -154,6 +154,7 @@ public class Event extends NodeMultiple {
 		playerAnswer=reader.next();
 		//interpretAnswer(playerAnswer);
 		chosenPath = interpretAnswer(playerAnswer);
+		//System.out.print(chosenPath);
 		return getDaughter(chosenPath);
 
 		//exposé de la situation
