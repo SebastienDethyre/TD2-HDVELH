@@ -15,6 +15,7 @@ public class EventExactSolution extends Event {
     private int id;
     private static int lastId=0;
     private Event daughters[];
+    
     public EventExactSolution(GUIManager gui, String data, String answer) {
         super(gui, data);
        // this.gui = gui;

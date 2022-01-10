@@ -27,6 +27,7 @@ public class Event extends NodeMultiple {
 
 	public Event(GUIManager gui, String data) {
 		super(data);
+		this.data= data;
 		this.gui = gui;
 		//this.data = data;
 

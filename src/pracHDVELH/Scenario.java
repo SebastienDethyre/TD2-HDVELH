@@ -17,8 +17,8 @@ public class Scenario {
 
 	/* TO BE COMPLETED */
 
-	public Scenario(GUIManager gui2, Event startEvent) {
-		gui = gui2;
+	public Scenario(GUIManager gui, Event startEvent) {
+		gui = gui;
 		head = startEvent;
 	}
 
@@ -62,13 +62,14 @@ public class Scenario {
 		Event startEvent = new Event(gui, "Go!\n" + "(1)1 (2)2");
 		Event event1 = new Event(gui, "event1:\n" + "(1)1.1 (2)1.2");
 		Event event2 = new Event(gui, "event2:\n" + "(1)2.1 (2)2.2");
+		//System.out.print(event2.getData());
 		Event endEvent = new Event(gui, "End event: that's it :-)");
 		startEvent.addDaughter(event1);
 		startEvent.setDaughter(event2, 1);
 		event1.addDaughter(startEvent);
 		event1.addDaughter(endEvent);
 		event2.addDaughter(event1);
-		//event2.addDaughter(startEvent);
+		event2.addDaughter(startEvent);
 		scenario = new Scenario(gui, startEvent);
 
 		// *2
@@ -78,6 +79,7 @@ public class Scenario {
 		// ***event3
 
 		Event event3 = new EventExactSolution(gui, "Wizard: how much is worth pi?", "3.14159");
+		
 		event2.setData(event2.getData() + " (3)2.3");
 		event2.addDaughter(event3);
 		event3.addDaughter(endEvent);
@@ -98,7 +100,7 @@ public class Scenario {
 		event4.addDaughter(event2);
 		event4.addDaughter(endEvent);
 		event4.addDaughter(event3);
-		scenario.run();
+		//scenario.run();
 		scenario2.run();
 	}
 }
