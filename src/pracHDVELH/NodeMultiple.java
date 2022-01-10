@@ -34,15 +34,13 @@ public class NodeMultiple {
 	 * @param i the index of the daughter node.
 	 * @return the {@code i}th daughter node, or {@code null} if it does not exist.
 	 */
-<<<<<<< HEAD
 
-	public NodeMultiple getDaughter(int i) {
-		if (i>daughters.length) return null;
-=======
+
+
 	
 	public NodeMultiple getDaughter(int i) {		
 		if (i>daughters.length) return null;	
->>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
+
 		return daughters[i];
 	}
 
@@ -61,23 +59,19 @@ public class NodeMultiple {
 	 * @param i        the daughter node's index
 	 */
 	public void setDaughter(NodeMultiple daughter, int i) {
-<<<<<<< HEAD
-		daughters[i]= daughter;
-=======
+
 		daughters[i]= daughter;		
->>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
+
 	}
 
 	/**
 	 * @return all the daughters
 	 */
-<<<<<<< HEAD
-	public NodeMultiple[] getDaughters() {
-		return daughters;
-=======
+
+
 	public NodeMultiple[] getDaughters() {		
 			return daughters;		
->>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
+
 	}
 
 	/**
@@ -147,11 +141,7 @@ public class NodeMultiple {
 		this.data = data;
 		daughters = new NodeMultiple [NODE_MAX_ARITY];
 	}
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 4b762bf2d0d6ca69c9bc4ea8d80b5b6e78279d8e
 }
 
 // eof
