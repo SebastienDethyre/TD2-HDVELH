@@ -22,7 +22,7 @@ public class NodeMultiple {
 	/* Overridden methods */
 	@Override
 	public String toString() {
-		return data.toString();
+		return (String) data;
 	}
 
 	/* Getters/Setters */

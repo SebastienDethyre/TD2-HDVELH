@@ -82,11 +82,11 @@ public class Scenario {
 		
 		event2.setData(event2.getData() + " (3)2.3");
 		event2.addDaughter(event3);
-		event3.addDaughter(event3);
-		System.out.print(event3.getDaughter(0)+"zob");
 		event3.addDaughter(endEvent);
+		//System.out.print(event3.getDaughter(0)+"test");
+		event3.addDaughter(event3);
 		
-		scenario2 = new Scenario(gui, event3);
+		//scenario2 = new Scenario(gui, event3);
 		/* ******* */
 		// **2.3
 		// ***event4
@@ -104,7 +104,7 @@ public class Scenario {
 		event4.addDaughter(endEvent);
 		
 		//scenario.run();
-		scenario2.run();
+		scenario.run();
 	}
 }
 
