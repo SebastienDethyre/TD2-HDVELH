@@ -24,18 +24,19 @@ public class Event extends NodeMultiple {
 	//private String data;
 	private int id;
 	private static int lastId=0;
-
+	
+	public Event() {
+		this(new GUIManager(), null);
+	};
+	
 	public Event(GUIManager gui, String data) {
 		super(data);
-	
 		this.gui = gui;
 		//this.data = data;
 		reader = gui.getInputReader();
 		id = ++ lastId;
 	}
-	public Event() {
-		this(new GUIManager(), null);
-	};
+	
 	/**
 	 * @return the playerAnswer
 	 */

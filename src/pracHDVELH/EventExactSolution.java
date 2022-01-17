@@ -17,6 +17,10 @@ public class EventExactSolution extends Event {
     //private Event daughters[];
     //private String pi;
     
+    public EventExactSolution() {
+ 	   this(new GUIManager(),null,null);
+    }
+    
     public EventExactSolution(GUIManager gui, String data, String value) {
         super(gui, data);
        // this.gui = gui;
@@ -27,23 +31,20 @@ public class EventExactSolution extends Event {
         //id = ++ lastId;
         
     }
-    public void interpretAnswer() {
+    public int interpretAnswer() {
 		if (value.equals(super.getReader().next())){
 			System.out.print("yes");
-			 super.setChosenPath(0);;
+			return 0;
 		}
 		else {
 			
-			super.setChosenPath(1);;
+			return 1;
 		}
 		
 		
 	
 	}
-    
-   public EventExactSolution() {
-	   this(new GUIManager(),null,null);
-   }
+   
 
   
 

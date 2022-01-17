@@ -22,7 +22,7 @@ public class NodeMultiple {
 	/* Overridden methods */
 	@Override
 	public String toString() {
-		return (String) data;
+		return data.toString();
 	}
 
 	/* Getters/Setters */
@@ -60,7 +60,7 @@ public class NodeMultiple {
 	 */
 	public void setDaughter(NodeMultiple daughter, int i) {
 
-		daughters[i]= daughter;		
+		this.daughters[i]= daughter;		
 
 	}
 
@@ -70,7 +70,7 @@ public class NodeMultiple {
 
 
 	public NodeMultiple[] getDaughters() {		
-			return daughters;		
+			return this.daughters;		
 
 	}
 
@@ -128,7 +128,7 @@ public class NodeMultiple {
 	public NodeMultiple() {
 		super(); /* appel au constructeur parent */
 		data = new Object();
-		daughters = new NodeMultiple [NODE_MAX_ARITY];
+		this.daughters = new NodeMultiple [NODE_MAX_ARITY];
 	}
 
 	/**
@@ -138,8 +138,10 @@ public class NodeMultiple {
 	 * @param data
 	 */
 	public NodeMultiple(Object data) {
+		this();
 		this.data = data;
-		daughters = new NodeMultiple [NODE_MAX_ARITY];
+		//daughters = new NodeMultiple [NODE_MAX_ARITY];
+		
 	}
 
 }
