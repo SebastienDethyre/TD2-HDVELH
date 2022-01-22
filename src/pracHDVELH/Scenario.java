@@ -35,7 +35,6 @@ public class Scenario {
 		while(nextEvent.hasDaughters()) {
 			nextEvent = nextEvent.run();
 
-
 		}
 
 	}

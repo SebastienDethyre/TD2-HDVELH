@@ -146,9 +146,8 @@ public class Event extends NodeMultiple {
 
 
 
-	public Event run() {		
-
-		gui.outputln(super.getData().toString());
+	public Event run() {	
+		gui.outputln(getData().toString());
 		gui.output(PROMPT_ANSWER);
 		playerAnswer = reader.next();
 		//interpretAnswer(playerAnswer);

@@ -9,13 +9,7 @@ public class EventExactSolution extends Event {
     public static final String WARNING_MSG_INTEGER_EXPECTED = "Please input a integer within range!";
    // private Scanner reader;
     private String value;
-    //private int chosenPath;
-    //private GUIManager gui;
-   // private String data;
-   // private int id;
-    //private static int lastId=0;
-    //private Event daughters[];
-    //private String pi;
+    
     
     public EventExactSolution() {
  	   this(new GUIManager(),null,null);
@@ -23,16 +17,13 @@ public class EventExactSolution extends Event {
     
     public EventExactSolution(GUIManager gui, String data, String value) {
         super(gui, data);
-       // this.gui = gui;
-        //this.data = data;
-        //playerAnswer=answer;
+       
         this.value= value;
-        //reader = gui.getInputReader();
-        //id = ++ lastId;
+        
         
     }
-    public int interpretAnswer() {
-		if (value.equals(super.getReader().next())){
+    public int interpretAnswer(String playerAnswer) {
+		if (value.equals(playerAnswer)){
 			System.out.print("yes");
 			return 0;
 		}
