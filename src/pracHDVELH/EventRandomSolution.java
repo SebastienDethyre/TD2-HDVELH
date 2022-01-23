@@ -13,15 +13,26 @@ public class EventRandomSolution extends Event {
 	private String solutionAnnoucement;
 	
 	public EventRandomSolution() {
-		this (new GUIManager(),null, new int[]{1,2,3,4,5,6}, null, null);
+		this (new GUIManager(),null, new int[]{0}, null, null);
 	}
 
 	public EventRandomSolution(GUIManager gui, String data, int[] partition, String waitingMsg, String solutionAnnoucement) {
 		super(gui,data);
+		this.randomSolution=DEFAULT_RANDOM_SOLUTION;
 		this.randomGenerator = new Random();
 		this.partition = partition;
 		this.waitingMsg = waitingMsg;
 		this.solutionAnnoucement = solutionAnnoucement;
 	}
-
+	
+	public int interpretAnswer(String playerAnswer) {
+		return Integer.parseInt(playerAnswer)-1;
+	}
+	
+	public Event run() {
+		randomSolution=randomGenerator.nextInt(partition.length);
+		dice = interpretAnswer(String.valueOf(randomSolution +1));
+		//System.out.print(dice);
+		return getDaughter(dice);
+	}
 }

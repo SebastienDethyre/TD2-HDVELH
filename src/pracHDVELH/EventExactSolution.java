@@ -24,20 +24,11 @@ public class EventExactSolution extends Event {
     }
     public int interpretAnswer(String playerAnswer) {
 		if (value.equals(playerAnswer)){
-			System.out.print("yes");
 			return 0;
 		}
 		else {
-			
 			return 1;
 		}
-		
-		
-	
 	}
-   
-
-  
-
 }
 
